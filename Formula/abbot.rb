@@ -3,7 +3,6 @@ class Abbot < Formula
 
   desc "Rust CLI for the Abbotik API"
   homepage "https://github.com/abbotik/cli"
-  license "MIT"
 
   host_os = RUBY_PLATFORM
   host_cpu = RbConfig::CONFIG.fetch("host_cpu")
@@ -23,6 +22,7 @@ class Abbot < Formula
 
   url "https://github.com/abbotik/homebrew-releases/releases/download/abbot-v1.0.0/#{archive}"
   sha256 checksum
+  license "MIT"
 
   def install
     bin.install "abbot"
