@@ -13,17 +13,27 @@ It is not the source repository for those tools and it does not build binaries.
 
 ## Installation
 
-When formulae are present, users can install them with:
+Users can install the current public CLI with:
 
 ```bash
 brew tap abbotik/tap
-brew install abbotik/tap/<formula>
+brew install abbotik/tap/abbot
 ```
 
 Or in one shot:
 
 ```bash
-brew install abbotik/tap/<formula>
+brew install abbotik/tap/abbot
+```
+
+## Formulae
+
+### abbot
+
+Rust CLI for the Abbotik API.
+
+```bash
+brew install abbotik/tap/abbot
 ```
 
 ## Developer Notes
