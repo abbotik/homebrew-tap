@@ -8,19 +8,19 @@ class Abbot < Formula
   host_cpu = RbConfig::CONFIG.fetch("host_cpu")
 
   if host_os.include?("darwin") && host_cpu.match?(/arm|aarch64/)
-    archive = "abbotik-cli-v1.2.0-aarch64-apple-darwin.tar.gz"
-    checksum = "1eda1609abe3f6c9c61b31a40a1e95264350e5b4761eeac3eb733a9dee8a2546"
+    archive = "abbotik-cli-v1.3.0-aarch64-apple-darwin.tar.gz"
+    checksum = "516d4e6694cfa23ec73c34af6ff94c13dd247eadc638eb6351702220eed5f607"
   elsif host_os.include?("darwin") && host_cpu == "x86_64"
-    archive = "abbotik-cli-v1.2.0-x86_64-apple-darwin.tar.gz"
-    checksum = "4c9924a2e753c24b10aabb15310308be59f80d882f87dfed5bb028948badc271"
+    archive = "abbotik-cli-v1.3.0-x86_64-apple-darwin.tar.gz"
+    checksum = "359d9e71514f64fd5effa827dcdff0d6c96f076450ff83072cc789ed88054c07"
   elsif host_os.include?("linux")
-    archive = "abbotik-cli-v1.2.0-x86_64-unknown-linux-gnu.tar.gz"
-    checksum = "47c93484c12d3dfc497508bdeb7e53c5212cc326d68103c852b7857dfa42b9f1"
+    archive = "abbotik-cli-v1.3.0-x86_64-unknown-linux-gnu.tar.gz"
+    checksum = "3ca871dba40a569520dc86acad03837e9bcd155ee02782403d6128327031577f"
   else
     raise "Unsupported platform for abbot: #{host_os} / #{host_cpu}"
   end
 
-  url "https://github.com/abbotik/homebrew-releases/releases/download/abbot-v1.2.0/#{archive}"
+  url "https://github.com/abbotik/homebrew-releases/releases/download/abbot-v1.3.0/#{archive}"
   sha256 checksum
   license "MIT"
 
