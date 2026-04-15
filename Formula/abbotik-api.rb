@@ -8,19 +8,19 @@ class AbbotikApi < Formula
   host_cpu = RbConfig::CONFIG.fetch("host_cpu")
 
   if host_os.include?("darwin") && host_cpu.match?(/arm|aarch64/)
-    archive = "abbotik-api-v7.2.0-aarch64-apple-darwin.tar.gz"
-    checksum = "dfc569deb8141bb39caa3fab26a7fdc0f940d765f9fd9b78e29e435c12ccdb14"
+    archive = "abbotik-api-v7.3.0-aarch64-apple-darwin.tar.gz"
+    checksum = "23966e4e38a5cf3a2bc2d701343038ebd6849f41e3c075bd4c9b45f8d0e8f4da"
   elsif host_os.include?("darwin") && host_cpu == "x86_64"
-    archive = "abbotik-api-v7.2.0-x86_64-apple-darwin.tar.gz"
-    checksum = "1487aed010b9f437cdbd2a216073e2d13f58c257be8e709cc20b9b642d278af9"
+    archive = "abbotik-api-v7.3.0-x86_64-apple-darwin.tar.gz"
+    checksum = "431a54241f9bbd4e0137617f78ec6a936c299d1eb230a500ad4c404c7ce2e6a5"
   elsif host_os.include?("linux")
-    archive = "abbotik-api-v7.2.0-x86_64-unknown-linux-gnu.tar.gz"
-    checksum = "62bdbea2513c0e2966c6393820095d6c653fd552c937398da842b7e900d09a3f"
+    archive = "abbotik-api-v7.3.0-x86_64-unknown-linux-gnu.tar.gz"
+    checksum = "d8ab360accd595e8c28e9c549495fb655789c231975a502622a9c6306a252c46"
   else
     raise "Unsupported platform for abbotik-api: #{host_os} / #{host_cpu}"
   end
 
-  url "https://github.com/abbotik/homebrew-releases/releases/download/abbotik-api-v7.2.0/#{archive}"
+  url "https://github.com/abbotik/homebrew-releases/releases/download/abbotik-api-v7.3.0/#{archive}"
   sha256 checksum
   license "MIT"
 
