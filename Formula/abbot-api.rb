@@ -8,22 +8,22 @@ class AbbotApi < Formula
   host_cpu = RbConfig::CONFIG.fetch("host_cpu")
 
   if host_os.include?("darwin") && host_cpu.match?(/arm|aarch64/)
-    archive = "abbot-api-v9.1.0-aarch64-apple-darwin.tar.gz"
-    checksum = "446a98ae4b6fe616ff1dd2bcb8d53b2f428336540eaa2f1dc5d7a7e50b2cd494"
+    archive = "abbot-api-v9.2.0-aarch64-apple-darwin.tar.gz"
+    checksum = "1ba2f7954c456da4270124e83b4c9720f26618cfec9b2d7fb2f3936bab9b1a5d"
   elsif host_os.include?("darwin") && host_cpu == "x86_64"
-    archive = "abbot-api-v9.1.0-x86_64-apple-darwin.tar.gz"
-    checksum = "ee19d2d16e4b5b107609f5ed358e081005f22183f9a5d0457736d1d03dd7a108"
+    archive = "abbot-api-v9.2.0-x86_64-apple-darwin.tar.gz"
+    checksum = "02e67bde1a6c29dd6d4facaa03bc9a76ac0aa6ebe00dc53abb07f5dc16f2ba5e"
   elsif host_os.include?("linux") && host_cpu.match?(/arm|aarch64/)
-    archive = "abbot-api-v9.1.0-aarch64-unknown-linux-gnu.tar.gz"
-    checksum = "0021c102518414b4840befec477c52d4ce256933ed2ac4187588974e9a85b53a"
+    archive = "abbot-api-v9.2.0-aarch64-unknown-linux-gnu.tar.gz"
+    checksum = "db4649d79740869b9ae1f27f5c7e96bf5ad22330f94e1df0b01972347f1aefd0"
   elsif host_os.include?("linux") && host_cpu == "x86_64"
-    archive = "abbot-api-v9.1.0-x86_64-unknown-linux-gnu.tar.gz"
-    checksum = "b974800ae1c3c65193da824d0ad75f82e7f54cd5390f825f69174a3a5760f707"
+    archive = "abbot-api-v9.2.0-x86_64-unknown-linux-gnu.tar.gz"
+    checksum = "e2f8a8bc3ab2866fd60eda6bea60b9bfdbfa38c2ce56f5fecbbbbae14146f441"
   else
     raise "Unsupported platform for abbot-api: #{host_os} / #{host_cpu}"
   end
 
-  url "https://github.com/abbotik/homebrew-releases/releases/download/abbot-api-v9.1.0/#{archive}"
+  url "https://github.com/abbotik/homebrew-releases/releases/download/abbot-api-v9.2.0/#{archive}"
   sha256 checksum
   license "MIT"
 
